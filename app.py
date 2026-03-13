@@ -10,7 +10,7 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Flatten, Dense, Dropout
 from tensorflow.keras.applications.vgg19 import VGG19
 
-base_model = VGG19(include_top = False, input_shape = (224, 224,3))
+base_model = VGG19(include_top = False, input_shape = (128, 128,3))
 
 
 x = base_model.output
@@ -80,7 +80,7 @@ def getResult(img):
 
     return result01
 
-@app.route('/', method = ['GET'])
+@app.route('/', methods = ['GET'])
 def index():
     return render_template('index.html')
 @app.route('/predict', methods = ['POST'])
