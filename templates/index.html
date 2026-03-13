@@ -1,29 +1,17 @@
-{% extends "import.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pneumonia Detection</title>
+</head>
 
-{% block content %}
+<body>
 
-<center>
-    <br><h2>PNEUMONIA Detection using deep learning</h2><br>
+<h2>Pneumonia Detection using Deep Learning</h2>
 
-        <from id="upload-file" method = "post">
-            <input type="file" name="file" accept=".png .jpg .jpeg">
-        </from>
+<form action="/predict" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="Predict">
+</form>
 
-        <div class="image-section" style="display:none;">
-            <img id="imagePreview" class="img-responsive" src="#" style="width:300px;height:300px;"/><base>
-            <div>
-                <button type="button" class="btn btn-info btn-lg" id="btn-predict">predict!</button>
-            </div>
-        </div>
-
-
-        <div class="loader" style="display:none;"></div>
-
-        <h3 id="result">
-            <span></span>
-        </h3>
-
-        
-</center><br><br>
-
-{% endblock %}
+</body>
+</html>
