@@ -46,11 +46,6 @@ This project aims to assist in **fast and accurate preliminary detection** using
 
 ---
 
-## 📸 Screenshots
-(Add screenshots of your web app here)
-
----
-
 ## ⚙️ How to Run Locally
 
 ```bash
